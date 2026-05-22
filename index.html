@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/6d66883833.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d66883833.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <title>Post 81</title>
 </head>
@@ -18,8 +19,8 @@
     <nav class="navbar">
         <div class="navbar__container">
             <div class="navbar__logo">
-                <img src="images\americanflag.jpg" alt="American Flag">
-                <label><a href="index.html">Scottish American Military Society</a></label>
+                <img id="americanFlag" src="images\americanflag.jpg" alt="American Flag" />
+                <label><a href="index.html" title="Home page">Scottish American Military Society Post 81</a></label>
             </div>
             <div class="navbar__menu">
                 <i class="fa-solid fa-bars"></i>
@@ -27,24 +28,29 @@
         </div>
         <div class="navbar__links hide">
             <ul class="nav__links">
-                <li><a href="#aboutsection">About</a></li>
-                <li><a href="#hqsection">HQ</a></li>
-                <li><a href="#uniformsection">Uniform</a></li>
-                <li><a href="#eventssection">Events</a></li>
-                <li><a href="#gallerysection">Gallery</a></li>
-                <li class="navbar__join"><a href="#joinsection"><button class="hero__button">Join</button></a></li>
+                <li class="nav__link-items"><a href="#aboutsection" id="aboutLink" name="navLinks">About</a></li>
+                <li class="nav__link-items"><a href="#hqsection" id="hqLink" name="navLinks">HQ</a></li>
+                <li class="nav__link-items"><a href="#uniformsection" id="uniformLink" name="navLinks">Uniform</a></li>
+                <li class="nav__link-items"><a href="#eventssection" id="eventsLink" name="navLinks">Events</a></li>
+                <li class="nav__link-items"><a href="#gallerysection" id="galleryLink" name="navLinks">Gallery</a></li>
+                <li class="nav__link-items navbar__join"><a href="#joinsection" id="joinLink" name="navLinks">Join</a></li>
             </ul>
         </div>
     </nav>
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero__container">
+    <section class="hero" id="homesection">
+        <div class="hero__container" id="home">
+            <a href="https://s-a-m-s.org/" title="SAMS National Site">
+                <img id="samsCrest" src="images/SAMSCrestAndMoto.png" alt="SAMS crest and moto" class="hero__samsNationalLink"/>
+            </a>
             <h1><span class="hero--gradient">SAMS</span> Post 81</h1>
             <h2><span class="hero--gradient">A</span>rchie</h2>
             <h2><span class="hero--gradient">M</span>cIntosh</h2>
             <h2><span class="hero--gradient">S</span>outheastern AZ</h2>
-            <p>"To protect and promote Scottish and American 
-                armed forces customs,traditions,and heritage."</p>
+            <p>
+                "To protect and promote Scottish and American
+                armed forces customs,traditions,and heritage."
+            </p>
         </div>
         <div class="hero__container">
             <img src="images/herosams.png" alt="sams coat of arms">
@@ -55,17 +61,17 @@
     <div class="badgecontainer">
         <div class="badgecontainer__wrap">
             <img class="badgecontainer__badge" src="images/army-logo.png" alt="Air force logo">
-            <img class="badgecontainer__badge"src="images/marines.png" alt="Army logo"></p>
-            <img class="badgecontainer__badge"src="images/navy.png" alt="Navy logo"></p>
-            <img class="badgecontainer__badge"src="images/air-force.png" alt="Marine logo"></p>
-            <img class="badgecontainer__badge"src="images/coast-guard.png" alt="Coast Guard logo"></p>
-            <img class="badgecontainer__badge"src="images/spaceforce.png" alt="Space Force logo"></p>
+            <img class="badgecontainer__badge" src="images/marines.png" alt="Army logo"></p>
+            <img class="badgecontainer__badge" src="images/navy.png" alt="Navy logo"></p>
+            <img class="badgecontainer__badge" src="images/air-force.png" alt="Marine logo"></p>
+            <img class="badgecontainer__badge" src="images/coast-guard.png" alt="Coast Guard logo"></p>
+            <img class="badgecontainer__badge" src="images/spaceforce.png" alt="Space Force logo"></p>
         </div>
     </div>
     <div class="block"></div>
     <!-- About section -->
     <section class="aboutsection" id="aboutsection">
-        <div class="aboutsection__container">
+        <div class="aboutsection__container" id="about">
             <h2>About</h2>
             <div class="aboutsection__mission">
                 <div>
@@ -91,8 +97,9 @@
                 </div>
                 <div>
                     <h3>History</h3><br>
-                    <p>Archie McIntosh was a famed Scots-Indian scout for the US Army during the Indian Wars period of our westward expansion and Post 81 is proud to carry his name on our Post. McIntosh was described as “tall, slender…a good drinking man and a hell of a talker.” He sometimes had to be propped up on his horse or carried in a wagon after an all-night binge, but the temperate General Crook always forgave him of his behavior, believing McIntosh’s professional judgement was “Razor Sharp”.
-                       <br><br> Following his military service, McIntosh settled on the San Carlos Apache Reservation in Eastern Arizona, where he married a San Carlos woman and fathered at least one son, Donald, who was named for Archie’s brother who was killed with Major Reno at the Battle of the Little Bighorn. Donald was sent to the Carlisle Indian School in Pennsylvania for his education and McIntosh descendants were heavily involved in San Carlos Tribal affairs well into the 20th century.
+                    <p>
+                        Archie McIntosh was a famed Scots-Indian scout for the US Army during the Indian Wars period of our westward expansion and Post 81 is proud to carry his name on our Post. McIntosh was described as “tall, slender…a good drinking man and a hell of a talker.” He sometimes had to be propped up on his horse or carried in a wagon after an all-night binge, but the temperate General Crook always forgave him of his behavior, believing McIntosh’s professional judgement was “Razor Sharp”.
+                        <br><br> Following his military service, McIntosh settled on the San Carlos Apache Reservation in Eastern Arizona, where he married a San Carlos woman and fathered at least one son, Donald, who was named for Archie’s brother who was killed with Major Reno at the Battle of the Little Bighorn. Donald was sent to the Carlisle Indian School in Pennsylvania for his education and McIntosh descendants were heavily involved in San Carlos Tribal affairs well into the 20th century.
                     </p>
                 </div>
             </div>
@@ -100,76 +107,68 @@
                 <div>
                     <h3>Membership</h3><br>
                     <p>The Society was founded as a Veterans organization. The membership is composed primarily of Veterans of Scottish ancestry who have served –– or are serving –– in the Armed Forces of the United States and the Commonwealth. If you support the purposes shown above, we would welcome your membership if you qualify. Membership is open to honorably discharged Veterans or active duty or reserve military persons who have served or are serving with any branch of the United States or Commonwealth Armed Forces.</p>
-                    <button class="aboutsection__button"><a href="docs/sams_corporate_charter_june_1987.pdf" target="_blank">Sams Charter</a></button>
-                    <button class="aboutsection__button"><a href="docs/2021approvedbylaws.pdf" target="_blank">Post 81 By-Laws</a></button>
+                    <button class="aboutsection__button" id="corpCharter">Sams Charter</button>
+                    <button class="aboutsection__button" id="byLaws">Post 81 By-Laws</button>
                 </div>
                 <div>
                     <img src="images/atease.jpg" alt="">
                 </div>
             </div>
+        </div>
     </section>
     <!-- Headquarters Section -->
-    <h2 class="hq__header" id="hqsection">Headquarters</h2>
-        <section class="hq">
-            <div class="hq__wrapcontainer">
-                <div class="hq__wrapper hidden">
-                    <div class="hq__container">
-                        <h3>David Barnhill</h3>
-                        <p class="hq__contact"><a href="tel:(520) 235-4602">(520) 235-4602</a> - </p>
-                        <address class="hq__contact"><a href="mailto:barnhillpost81@gmail.com">barnhillpost81@gmail.com</a></address>
-                        <img src="images\david.jpg" alt="David Barnhill Vice Commander - Bravo Company Commander">
-                        <p class="hq__titles">Post 81 Commander and Bravo Company Commander Sierra Vista</p>
-                        <div class="hq__buttons">
-                            <button class="hq__button back"> < </button>
-                            <button class="hq__button next"> > </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="hq__wrapper hidden">
-                    <div class="hq__container">
-                        <h3>Guy Peabody</h3>
-                        <p class="hq__contact"><a href="tel:(520) 270-8362">​(520) 270-8362</a> - </p>
-                        <address class="hq__contact"><a href="mailto:guybuick1972@gmail.com">guybuick1972@gmail.com</a></address>
-                        <img src="images\dad.jpg" alt="Guy Peabody Vice Commander">
-                        <p class="hq__titles">Post 81 Alfa Company Commander Tucson</p>
-                        <div class="hq__buttons">
-                            <button class="hq__button back"> < </button>
-                            <button class="hq__button next"> > </button>
-                        </div>
-                    </div>
-                </div>
-            <div class="hq__wrapper hidden">
-                <div class="hq__container">
-                    <h3>Gordon Walker</h3>
-                    <p class="hq__contact"><a href="tel:(520) 205-2173">(520) 205-2173</a> - </p>
-                    <address class="hq__contact"><a href="gwalk61@yahoo.com">gwalk61@yahoo.com</a></address>
-                    <img src="images\Gordon Bio Shot.jpg" alt="Gordon Walker: Alfa Company Adjutant">
-                    <p class="hq__titles">Post 81 Alfa Company Adjutant Tucson</p>
-                    <div class="hq__buttons">
-                        <button class="hq__button back"> < </button>
-                        <button class="hq__button next"> > </button>
-                    </div>
+    <section class="hq" id="hqsection">
+        <h2 class="hq__header" id="hqheader">Headquarters</h2>
+        <div class="hq__wrapcontainer" id="hq">
+            <div class="hq__container">
+                <h3>David Barnhill</h3>
+                <p class="hq__contact"><a href="tel:(520) 235-4602">(520) 235-4602</a> - </p>
+                <address class="hq__contact"><a href="mailto:barnhillpost81@gmail.com">barnhillpost81@gmail.com</a></address>
+                <img src="images\david.jpg" alt="David Barnhill Vice Commander - Bravo Company Commander">
+                <p class="hq__titles">Post 81 Commander and Bravo Company Commander Sierra Vista</p>
+                <div class="hq__buttons">
+                    <button class="hq__button back"> < </button>
+                    <button class="hq__button next"> > </button>
                 </div>
             </div>
-                <div class="hq__wrapper hidden">
-                    <div class="hq__container">
-                        <h3>Rick Bowman</h3>
-                        <p class="hq__contact"><a href="tel:(520) 559-1476">(520) 559-1476</a> - </p>
-                        <address class="hq__contact"><a href="mailto:larryandlindabowman@yahoo.com">larryandlindabowman@yahoo.com</a></address>
-                        <img src="images\Bowman Bio Shot.jpg" alt="Rick Bowman: Bravo Company Adjutant">
-                        <p class="hq__titles">Post 81 Bravo Company Adjutant Sierra Vista</p>
-                        <div class="hq__buttons">
-                            <button class="hq__button back"> < </button>
-                            <button class="hq__button next"> > </button>
-                        </div>
-                    </div>
+            <div class="hq__container">
+                <h3>Guy Peabody</h3>
+                <p class="hq__contact"><a href="tel:(520) 270-8362">​(520) 270-8362</a> - </p>
+                <address class="hq__contact"><a href="mailto:guybuick1972@gmail.com">guybuick1972@gmail.com</a></address>
+                <img src="images\dad.jpg" alt="Guy Peabody Vice Commander">
+                <p class="hq__titles">Post 81 Alfa Company Commander Tucson</p>
+                <div class="hq__buttons">
+                    <button class="hq__button back"> < </button>
+                    <button class="hq__button next"> > </button>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="hq__container">
+                <h3>Gordon Walker</h3>
+                <p class="hq__contact"><a href="tel:(520) 205-2173">(520) 205-2173</a> - </p>
+                <address class="hq__contact"><a href="gwalk61@yahoo.com">gwalk61@yahoo.com</a></address>
+                <img src="images\Gordon Bio Shot.jpg" alt="Gordon Walker: Alfa Company Adjutant">
+                <p class="hq__titles">Post 81 Alfa Company Adjutant Tucson</p>
+                <div class="hq__buttons">
+                    <button class="hq__button back"> < </button>
+                    <button class="hq__button next"> > </button>
+                </div>
+            </div>
+            <div class="hq__container">
+                <h3>Rick Bowman</h3>
+                <p class="hq__contact"><a href="tel:(520) 559-1476">(520) 559-1476</a> - </p>
+                <address class="hq__contact"><a href="mailto:larryandlindabowman@yahoo.com">larryandlindabowman@yahoo.com</a></address>
+                <img src="images\Bowman Bio Shot.jpg" alt="Rick Bowman: Bravo Company Adjutant">
+                <p class="hq__titles">Post 81 Bravo Company Adjutant Sierra Vista</p>
+                <div class="hq__buttons">
+                    <button class="hq__button back"> < </button>
+                    <button class="hq__button next"> > </button>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Uniformsection -->
     <section class="uniformsection" id="uniformsection">
-        <div class="uniformsection__container">
+        <div class="uniformsection__container" id="uniform">
             <h2>Uniform</h2>
             <div class="uniformsection__a">
                 <div>
@@ -177,20 +176,24 @@
                 </div>
                 <div class="uniformsection__description">
                     <h3>Class A</h3><br>
-                    <p>Standard SAMS Uniform; Tan aviator or service branch shirt (long or short sleeve),
+                    <p>
+                        Standard SAMS Uniform; Tan aviator or service branch shirt (long or short sleeve),
                         appropriate headgear, Clan, military, or general tartan kilt (No utility kilts), kilt belt, appropriate
                         buckle, sporran, sgian dubh, kilt hose, flashes, and footgear. Hackles are to
-                        be worn only by Post Officers and Honor Guard members.</p>
+                        be worn only by Post Officers and Honor Guard members.
+                    </p>
                 </div>
             </div>
             <div class="uniformsection__b">
                 <div class="uniformsection__description">
                     <h3>Class B</h3><br>
-                    <p>Honor Guard Tan; Tan long sleeve shirt, full size ribbons and badges, black tie,
+                    <p>
+                        Honor Guard Tan; Tan long sleeve shirt, full size ribbons and badges, black tie,
                         horsehair sporran, Scottish Lion belt buckle, plain black belt, red flashes, black hose, white spats,
                         white gloves and black polished ghillie brogues or low quarter shoes, glengarry cap w/ red &
                         white dicing and red hackle. (NOTE: Horsehair sporran is to be replaced with your regular
-                        sporran after Honor Guard Duties are completed.)</p>
+                        sporran after Honor Guard Duties are completed.)
+                    </p>
                 </div>
                 <div>
                     <img src="images\uniforms\uniformB.png" alt="">
@@ -202,17 +205,20 @@
                 </div>
                 <div class="uniformsection__description">
                     <h3>Class C</h3><br>
-                    <p>Honor Guard Kilt Jacket; Kilt Jacket w/full size ribbons and badges, SAMS Pin on each
+                    <p>
+                        Honor Guard Kilt Jacket; Kilt Jacket w/full size ribbons and badges, SAMS Pin on each
                         epaulet, “81” on collar, Scottish Lion belt buckle, plain black belt, horsehair sporran, white spats,
                         white gloves, red flashes, black hose with black ghillie brogues or low quarter shoes, glengarry
-                        cap w/ red & white dicing and red hackle.</p>
+                        cap w/ red & white dicing and red hackle.
+                    </p>
                 </div>
             </div>
+        </div>
     </section>
     <!-- Events section -->
     <section class="events" id="eventssection">
-        <h2>Events</h2>
-        <div class="events__container">
+        <div class="events__container" id="eventsdiv">
+            <h2>Events</h2>
             <div class="events__img">
                 <img src="docs/augustCal.jpg" alt="Events Calender">
             </div>
@@ -220,9 +226,24 @@
     </section>
     <!-- Gallery Section -->
     <section class="gallery" id="gallerysection">
-        <div class="gallery__container">
+        <div class="gallery__container" id="gallery">
             <h2>Gallery</h2>
             <div class="gallery__grid" id="2022">
+                <div class="gallery__griditem">
+                    <a href="2026.html">
+                        <h3>Year in Review: 2026</h3>
+                    </a>
+                </div>
+                <div class="gallery__griditem">
+                    <a href="2025.html">
+                        <h3>Year in Review: 2025</h3>
+                    </a>
+                </div>
+                <div class="gallery__griditem">
+                    <a href="2024.html">
+                        <h3>Year in Review: 2024</h3>
+                    </a>
+                </div>
                 <div class="gallery__griditem">
                     <a href="2023.html">
                         <h3>Year in Review: 2023</h3>
@@ -251,56 +272,57 @@
     </section>
     <!-- Join Section -->
     <section class="join" id="joinsection">
-        <form action="https://formsubmit.co/samspost81@gmail.com" method="POST" class="join__container">
+        <form action="https://formsubmit.co/mckeedom@gmail.com" method="POST" class="join__container" id="join">
             <h2>Become a Member</h2>
             <p>We look forward to your involvement</p>
             <div class="join__label stack">
-                <label for="firstname">First Name:</label>
+                <label for="firstname" class="join__label">First Name:</label>
                 <input type="text" name="firstName" id="firstname" placeholder="Archie" required>
             </div>
             <div class="join__label stack">
-                <label for="lastname">Last Name:</label>
-                <input type="text" name="lastName" id="lastname"placeholder="McIntosh" required>
+                <label for="lastname" class="join__label">Last Name:</label>
+                <input type="text" name="lastName" id="lastname" placeholder="McIntosh" required>
             </div>
             <div class="join__label stack">
-                <label for="email">Email:</label>
+                <label for="email" class="join__label">Email:</label>
                 <input type="email" name="email" id="email" placeholder="ArchieMcIntosh@samspost81.com" required>
             </div>
             <div class="join__label">
-                <label for="yes-no">I am of Scottish Descent:</label>
-                <input type="radio" name="Scottish Descent" id="yes-no" required>Yes</input>
-                <input type="radio" name="Scottish Descent" id="yes-no" required>No</input>
+                <label for="scottishdescent" class="join__label">I am of Scottish Descent:</label>
+                <input type="checkbox" name="Scottish Descent" id="scottishdescent" required>
             </div>
             <div class="join__label stack">
-                <label for="surname">My surname is:</label>
-                <input type="text" name="Surname" id="surname"placeholder="MacDonald">
+                <label for="surname" class="join__label">My surname is:</label>
+                <input type="text" name="Surname" id="surname" placeholder="MacDonald">
             </div>
             <div class="join__label stack">
-                <label for="reasons">If not of Scots descent, reason(s) for requesting membership:</label>
-                <textarea name="Reasons for Joining" id="reasons for joining" cols="10" rows="5" placeholder="(marriage to a Scot, Commonwealth military service, etc.)"></textarea>
+                <label for="reasons" class="join__label">If not of Scots descent, reason(s) for requesting membership:</label>
+                <textarea name="Reasons for Joining" id="reasons" class="join__textarea" cols="10" rows="5" placeholder="(marriage to a Scot, Commonwealth military service, etc.)"></textarea>
             </div>
             <div class="join__label">
-                <label for="servicebranch">Military Service:</label><br>
-                <input type="radio" name="branch" id="servicebranch" value="army">ARMY</input>
-                <input type="radio" name="branch" id="servicebranch" value="usmc">USMC</input>
-                <input type="radio" name="branch" id="servicebranch" value="navy">NAVY</input>
-                <input type="radio" name="branch" id="servicebranch" value="air force">AIR FORCE</input>
-                <input type="radio" name="branch" id="servicebranch" value="uscg">USCG</input><br>
-                <input type="radio" name="branch" id="servicebranch" value="space force">SPACE FORCE</input>
-                <input type="radio" name="branch" id="servicebranch" value="british commonwealth">British Commonwealth Forces</input>
+                <label for="services" class="join__label">Military Service:</label><br>
+                <select id="services" name="branch" class="join__select">
+                    <option value="army">ARMY</option>
+                    <option value="marines">USMC</option>
+                    <option value="navy">NAVY</option>
+                    <option value="airforce">AIR FORCE</option>
+                    <option value="coastguard">USCG</option>
+                    <option value="spaceforce">SPACE FORCE</option>
+                    <option value="britishcommonwealth">BRITISH COMMONWEALTH SERVICE</option>
+                </select>                
             </div>
             <div class="join__label stack">
-                <label for="note">Message to Commander:</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <label for="message" class="join__label">Message to Commander:</label>
+                <textarea name="message" id="message" class="join__textarea" cols="30" rows="10"></textarea>
             </div>
-            <div class="join__label">
-                <button type="submit"class="hero__button">Submit</button>
+            <div class="join__submit">
+                <button type="submit" class="hero__button">Join</button>
             </div>
         </form>
     </section>
     <footer>
-        <p>&copy; Daniel's Development</p>
+        <p>&copy; SAMS Post 81</p>
     </footer>
 </body>
-<script src="script.js"></script>
 </html>
+<script src="script.js"></script>
